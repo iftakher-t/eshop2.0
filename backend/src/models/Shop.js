@@ -14,6 +14,10 @@ const shopSchema = new Schema({
 
     isDeleted: { type:Boolean, default :false},
 
+    product:{ 
+        type:[String], default:""
+    },
+
     profile: {
          type: Schema.Types.ObjectId,
          ref: User // we need required Merchant(shop owner) schema

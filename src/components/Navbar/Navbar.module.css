@@ -2,6 +2,16 @@
 blackSecondary:'#333E4F',
 redPrimary:'#BA3420',
 whiteBody:'#F7F8Fa', */
+*{
+    box-sizing: border-box;
+ }
+ 
+ :root{
+    --main-padding:15px;
+    --icon-bg-color:white;
+    --icon-color:black;
+ }
+ 
 body{
     background:#F7F8Fa;
     margin:0;
@@ -9,20 +19,32 @@ body{
 }
 
 .container{
-    background:#F7F8Fa;
-    color:#111827;
+    display: grid;
+    height: 5vh;
+    grid-template-columns:1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr;
+    grid-template-areas: 
+                "top top . . . . . .  . . top"
+                "m m m m  m m m m  m m m m ";
 }
+
+.top{
+    grid-area: top;
+    /* padding:var(--main-padding); */
+    background-color:rgba(250,250,250);
+
+ }
 
 .catagories{
     background:#BA3420;
     color:#F7F8Fa;
     text-transform: uppercase;
     width:100px;
-    max-width:1000px;
-    display:inline;
+    max-width:100px;
 }
 
 .menubar{
+    grid-area: m;
     background:#111827;
     color:#F7F8Fa;
     width:500px;
