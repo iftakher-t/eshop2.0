@@ -19,7 +19,15 @@ const productSchema = new Schema({
 
     tags:{ 
         type: [String], required:true 
-    }
+    },
+    shop :
+        { type: Schema.Types.ObjectId,
+          ref: 'Shop' // we need required Post schema
+        },
+    productReview:[{ 
+            type:Schema.Types.ObjectId, 
+            ref: 'ProductReview'
+        }]
 
 },
 {

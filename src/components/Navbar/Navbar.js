@@ -21,7 +21,7 @@ const Navbar = () => {
             </div>
             <div className={styles.container_searchbar}> 
                 <div className = "Logo"><a href="ev.com">EVALY</a></div>
-                <div className = {styles.searchbar}><input type="text" /><HiSearch color = "purple" /></div>
+                <div className = {styles.searchbar}><input type="text" placeholder="Search.. " /><HiSearch color = "purple" /></div>
                 <div className = "cart"><AiOutlineShoppingCart color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "notification"><IoMdNotificationsOutline color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "chat"><BsChat color = "purple" /><a href="www.google.com"></a></div>

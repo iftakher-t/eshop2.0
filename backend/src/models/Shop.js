@@ -21,7 +21,11 @@ const shopSchema = new Schema({
     profile: {
          type: Schema.Types.ObjectId,
          ref: User // we need required Merchant(shop owner) schema
-        }
+        },
+    shopReview:[{ 
+            type:Schema.Types.ObjectId, 
+            ref: 'User'
+        }]
         
 },{
     timestamps:true
