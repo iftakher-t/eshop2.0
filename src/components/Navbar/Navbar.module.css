@@ -1,53 +1,83 @@
-/* blackPrimary : '#111827',
-blackSecondary:'#333E4F',
-redPrimary:'#BA3420',
-whiteBody:'#F7F8Fa', */
+
 *{
     box-sizing: border-box;
  }
  
  :root{
-    --main-padding:15px;
+    --main-padding:10px;
     --icon-bg-color:white;
     --icon-color:black;
+    --black-primary : #111827;
+    --black-Secondary:#333E4F;
+    --red-Primary:#BA3420;
+    --white-Body:#F7F8Fa;
  }
  
 body{
-    background:#F7F8Fa;
+    background:var(--white-Body);
     margin:0;
     padding:0;
 }
 
 .container{
-    display: grid;
     height: 5vh;
-    grid-template-columns:1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
-    grid-template-rows:1fr;
-    grid-template-areas: 
-                "top top . . . . . .  . . top"
-                "m m m m  m m m m  m m m m ";
+    width: 1005px;
+    min-width:400px;
 }
 
-.top{
-    grid-area: top;
-    /* padding:var(--main-padding); */
-    background-color:rgba(250,250,250);
+.container_text{
+    display:grid;
+    height:26px;
+    grid-template-columns:repeat(auto-fit, minmax(100px,1fr));
+    padding:var(--main-padding);
+    background:rgb(236, 241, 239);
+
 
  }
 
+ .container_text a {
+    text-decoration:none;
+    font-size:12px;
+    padding:2px;
+ }  
+ /* -------------------searchbar */
+ .container_searchbar {
+    display:grid;
+    grid-template-columns:1fr 7fr 1fr 1fr 1fr 1fr;
+    padding:var(--main-padding);
+    background:rgba(250,250,250);
+    height:36px;
+ }  
+ .container_searchbar .searchbar{
+     width:600px;
+     height:36px;
+ }
+
+ /* ------------------------menubar  */
+ .menubar{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px,1fr));
+    padding:var(--main-padding);
+    background:#111827;
+    color:#F7F8Fa;
+    height:32px;
+    width:100%;
+    min-width:400px;
+    
+}
+.menubar a {
+    text-decoration:none;
+    font-size:12px;
+    padding:2px;
+    color:var(--white-Body);
+ } 
 .catagories{
     background:#BA3420;
     color:#F7F8Fa;
     text-transform: uppercase;
-    width:100px;
-    max-width:100px;
+    height:32px;
+    width:170px;
+    max-width:170px;
+    padding:5px;;
 }
 
-.menubar{
-    grid-area: m;
-    background:#111827;
-    color:#F7F8Fa;
-    width:500px;
-    max-width:5000px;
-    
-}
