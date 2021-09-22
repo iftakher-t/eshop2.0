@@ -3,7 +3,6 @@ const {Schema, model}= require('mongoose')
 // const Post = require('./Post')
 
 const commentSchema = new Schema({
-    post:[],
     post:{ 
         type:Schema.Types.ObjectId, ref: 'Post', required:true
         },

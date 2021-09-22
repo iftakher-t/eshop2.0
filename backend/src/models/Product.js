@@ -10,6 +10,9 @@ const productSchema = new Schema({
     productPrice:{ 
         type:String, required:true,
     },
+    productDiscountPrice:{ 
+        type:String, required:true,
+    },
     productColor:{ 
         type:[String], required:true,
     },

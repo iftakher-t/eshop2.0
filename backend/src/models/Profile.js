@@ -15,14 +15,14 @@ const profileSchema = new Schema({
         website : String, facebook : String, twitter : String, 
         github : String },
 
-    posts :[ 
+    productReview :[ 
         { type: Schema.Types.ObjectId,
-          ref: 'Post' // we need required Post schema
+          ref: 'ProductReview' // we need required ProductReview schema
         }
     ],
-    bookMarks :[ 
+    addToCart :[ 
         { type: Schema.Types.ObjectId,
-          ref: 'Post' // we need required Post schema
+          ref: 'AddToCart' // we need required AddToCart schema
         }
     ],
     redMark : { String , default :'' }, // for bad conduct
