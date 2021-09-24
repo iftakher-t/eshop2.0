@@ -1,0 +1,35 @@
+.cartIcon{
+    
+    font-size: 35px;
+    margin-left: 45px;
+    position: center;
+    cursor: pointer;
+}
+.notifications{
+    
+    font-size: 35px;
+    margin-left: 45px;
+    position: center;
+    cursor: pointer;
+}
+.chatbox{
+    font-size: 35px;
+    margin-left: 45px;
+    position: center;
+    cursor: pointer;
+}
+.account{
+    
+    font-size: 35px;
+    margin-left: 45px;
+    position: center;
+    cursor: pointer;
+} 
+.icon{
+    
+    margin-left: 45px;
+    float: right;
+    display: flex;
+    text-align: center;
+
+}

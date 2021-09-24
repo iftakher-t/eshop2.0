@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './App.module.css'; 
 import Navbar from './components/Navbar/Navbar'
+
+// import Search from './components/Search/Search'
+
 import {BrowserRouter} from 'react-router-dom';
 
 
@@ -10,7 +13,8 @@ function App() {
     <div className={styles.App}>
       <BrowserRouter>
         <Navbar />
-        </BrowserRouter>
+      </BrowserRouter>
+    {/* <div>      <Search /></div> */}
     </div>
   );
 } 

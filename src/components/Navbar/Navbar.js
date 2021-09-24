@@ -9,6 +9,7 @@ import {GiHamburgerMenu } from 'react-icons/gi';
 import { HiSearch } from "react-icons/hi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import {RiArrowDropDownLine } from 'react-icons/ri';
+import { MdPageview } from "react-icons/md";
 
 const Navbar = () => {
     return (
@@ -19,9 +20,12 @@ const Navbar = () => {
                 <div className = "mail"><AiOutlineMail color = "purple" /><a href = "mailto:ift.tec@gmail.com">ift.tec@gmail.com</a></div>
                 <div className = "app_link"><AiOutlineMobile color = "purple" /><a href="www.google.com">Save big on our app!</a></div>
             </div>
-            <div className={styles.container_searchbar}> 
+            <div className={styles.container_bar}> 
                 <div className = "Logo"><a href="ev.com">EVALY</a></div>
-                <div className = {styles.searchbar}><input type="text" placeholder="Search.. " /><HiSearch color = "purple" size="1.3rem" /></div>
+                <div className = {styles.searchbar}><input type="text" placeholder="Search.. " />
+                <div className = {styles.searchicon}>
+                    <MdPageview color = "white" size="2rem" /></div>
+                </div>
                 <div className = "cart"><AiOutlineShoppingCart color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "notification"><IoMdNotificationsOutline color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "chat"><BsChat color = "purple" /><a href="www.google.com"></a></div>

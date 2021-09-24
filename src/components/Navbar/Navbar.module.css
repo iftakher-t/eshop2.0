@@ -41,7 +41,9 @@ body{
     color:black;
  }  
  /* -------------------searchbar */
- .container_searchbar {
+ .container_bar {
+    width: 100%;
+    background-color: white;
     display:grid;
     grid-template-columns:1fr 7fr 1fr 1fr 1fr 1fr;
     padding:var(--main-padding);
@@ -51,12 +53,26 @@ body{
     margin-bottom:19px;
  }  
  .searchbar input{
-     width:550px;
+     width:500px;
      height:32px;
      border:2px solid black;
      border-radius:5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
  }
- .container_searchbar a {
+
+ .searchicon{
+    border: 1px solid black;
+    border-radius: 1px;
+    height: 40px;
+    width: 70px;
+    display: grid;
+    background:black;
+    place-items: center;
+    cursor: pointer;
+    
+}
+ .container_bar a {
     text-decoration:none;
     color:black;
     font-size:25px;
