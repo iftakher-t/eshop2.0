@@ -1,6 +1,6 @@
 const {Schema, model}= require('mongoose')
 const bcrypt = require('bcrypt')
-const Profile = require('./Profile')
+const Profile = require('./Message')
 
 const userSchema = new Schema({
     firstName:{ type:String, default:"" },
@@ -10,7 +10,6 @@ const userSchema = new Schema({
 
     phoneNumber:{ type:String, required : true }, //  unique : true, 
     password: { type:String, required : true },
-    profileImage: { type:String, default:"" },
     Birthday: { type:String, default:"" },
 
     isDeleted: { type:Boolean, default :false},

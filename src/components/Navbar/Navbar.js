@@ -21,7 +21,7 @@ const Navbar = () => {
             </div>
             <div className={styles.container_searchbar}> 
                 <div className = "Logo"><a href="ev.com">EVALY</a></div>
-                <div className = {styles.searchbar}><input type="text" placeholder="Search.. " /><HiSearch color = "purple" /></div>
+                <div className = {styles.searchbar}><input type="text" placeholder="Search.. " /><HiSearch color = "purple" size="1.3rem" /></div>
                 <div className = "cart"><AiOutlineShoppingCart color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "notification"><IoMdNotificationsOutline color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "chat"><BsChat color = "purple" /><a href="www.google.com"></a></div>
@@ -30,7 +30,8 @@ const Navbar = () => {
         
                 <div className = {styles.menubar}>
                     <div className = {styles.catagories}>
-                        <GiHamburgerMenu color = "white" /> catagories <RiArrowDropDownLine color = "white" />
+                        <GiHamburgerMenu color = "white" />
+                         catagories <RiArrowDropDownLine color = "white" />
                     </div> 
                         <Link to="/"> </Link>
                         <NavLink to="/dashboard">All Shop</NavLink>

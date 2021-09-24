@@ -1,7 +1,8 @@
 const {Schema, model}= require('mongoose')
-const Profile = require('./Profile')
+const User = require('./User')
 
 const topUpSchema = new Schema({
+    title:{ type:String, default:"" },
     mobileNumber:{ type:String, default:"" },
     operator:{ type:String, required : true },
     subscriptionType:{ type:String, required : true },  
@@ -11,9 +12,9 @@ const topUpSchema = new Schema({
     munites: { type:String, default:"" },
     sms: { type:String, default:"" },
 
-    profile: {
+    user: {
          type: Schema.Types.ObjectId,
-         ref: Profile // we need required Profile schema
+         ref: User // we need required Profile schema
         },
         
 },{

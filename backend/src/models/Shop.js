@@ -24,10 +24,12 @@ const shopSchema = new Schema({
         },
     shopReview:[{ 
             type:Schema.Types.ObjectId, 
-            ref: 'User'
+            ref: 'Shop'
         }]
         
 },{
+
+
     timestamps:true
 })
 
