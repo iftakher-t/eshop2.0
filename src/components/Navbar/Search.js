@@ -1,16 +1,13 @@
-import React from 'react';
-import { AiOutlineMail, AiOutlineMobile, AiOutlineShoppingCart } from 'react-icons/ai';
+import React from 'react'
+import styles from './Search.module.css'; 
 import { BiPhoneCall } from 'react-icons/bi';
 import { BsChat } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import { FaSearch } from 'react-icons/fa';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineMail, AiOutlineMobile,AiOutlineShoppingCart  } from 'react-icons/ai';
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { RiArrowDropDownLine } from 'react-icons/ri';
-import { Link, NavLink } from 'react-router-dom';
-import styles from './Navbar.module.css';
+import { IoSearchCircleSharp } from "react-icons/io5";
 
-const Navbar = () => {
+const Search = () => {
     return (
         <>
         <div className={styles.container}>
@@ -25,49 +22,18 @@ const Navbar = () => {
                     <div> 
                     <input type="text" placeholder="Search.. " />
                     </div>
-
                     <div className = {styles.searchicon}>
-                    <FaSearch className="ico"/>
+                    <IoSearchCircleSharp className = 'ico' color="white" size="1.3rem" />
                     </div>
                 </div>
-
-
-
-
-
-
                 <div className = "cart"><AiOutlineShoppingCart color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "notification"><IoMdNotificationsOutline color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "chat"><BsChat color = "purple" /><a href="www.google.com"></a></div>
                 <div className = "profile"><CgProfile color = "purple" /><a href="www.google.com"></a></div>
             </div>
-        
-                <div className = {styles.menubar}>
-                    <div className = {styles.catagories}>
-                        <GiHamburgerMenu color = "white" />
-                         catagories <RiArrowDropDownLine color = "white" />
-                    </div> 
-                        <Link to="/"> </Link>
-                        <NavLink to="/dashboard">All Shop</NavLink>
-                        <NavLink to="/dashboard">Campaign</NavLink>
-                        <NavLink to="/dashboard">Top-up</NavLink>
-                        <NavLink to="/dashboard">Express</NavLink>
-                        <NavLink to="/dashboard">T10</NavLink>
-                        <NavLink to="/dashboard">News Feeds</NavLink>
-                        <NavLink to="/dashboard"> Merchant zone</NavLink>
-                        <NavLink to="/dashboard"> Help</NavLink>
-
-
-                    {/*<Switch>
-                    <Route path="/" component={Mainpage} exact />
-                    <Route path="/dashboard"
-                        component={Dashbord} 
-                    /> </Switch>
-                    */}
-                </div>
-            </div>
+        </div>
         </>
     )
 }
 
-export default Navbar
+export default Search
