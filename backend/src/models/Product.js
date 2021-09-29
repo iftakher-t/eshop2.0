@@ -1,16 +1,28 @@
 const {Schema, model}= require('mongoose')
 
 const productSchema = new Schema({
-    productTitle:{ 
+    productName:{ 
         type:String, required:true, trim:true, maxlength:50 
+    },
+    productCode:{ 
+        type:String, required:true, trim:true
     },
     productModel:{ 
         type:String, required:true,
     },
-    productPrice:{ 
+    stockInfo:{ 
+        type:String,
+    },
+    currentPrice:{ 
+        type:String, required:true,
+    },
+    previousPrice:{ 
         type:String, required:true,
     },
     productDiscountPrice:{ 
+        type:String, default:'',
+    },
+    productImage:{ 
         type:String, required:true,
     },
     productColor:{ 
@@ -21,6 +33,9 @@ const productSchema = new Schema({
     },
 
     tags:{ 
+        type: [String], required:true 
+    },
+    brand:{ 
         type: [String], required:true 
     },
     shop :

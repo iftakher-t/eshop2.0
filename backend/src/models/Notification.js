@@ -16,4 +16,4 @@ const notificationSchema = new Schema({
     timestamps:true
 })
 
-module.exports = model('User', notificationSchema)
+module.exports = model('Notification', notificationSchema)

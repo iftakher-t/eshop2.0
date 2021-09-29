@@ -24,7 +24,7 @@ const shopSchema = new Schema({
         },
     shopReview:[{ 
             type:Schema.Types.ObjectId, 
-            ref: 'Shop'
+            ref: 'Review'
         }]
         
 },{

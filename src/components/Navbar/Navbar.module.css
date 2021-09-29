@@ -24,62 +24,19 @@ body {
   min-width: 400px;
 }
 
-/* .container_text {
-  display: grid;
-  height: 26px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  padding: var(--main-padding);
-  background: rgb(236, 241, 239);
-  padding: 5px;
-} */
 
-/* -------------------searchbar----------------- */
-.container_bar {
-  width: 100%;
-  background-color: white;
-  display: grid;
-  grid-template-columns: 1fr 7fr 1fr 1fr 1fr 1fr;
-  padding: var(--main-padding);
-  background: rgba(250, 250, 250);
-  height: 36px;
-  margin-top: 5px;
-  margin-bottom: 19px;
-}
-.searchbar input {
-  width: 500px;
-  height: 32px;
-  border: 2px solid black;
-  border-radius: 5px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
-.searchbar {
-  border-radius: 1px;
-  height: 37px;
-  width: 550px;
-  grid-template-columns: 1fr 1fr;
-  display: grid;
-  cursor: pointer;
-}
-
-.container_bar a {
-  text-decoration: none;
-  color: black;
-  font-size: 25px;
-  font-weight: bold;
-  text-transform: lowercase;
-}
 /* ------------------------menubar  */
 .menubar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  display: flex;
   background: #111827;
   color: #f7f8fa;
   height: 34px;
   width: 100%;
   min-width: 400px;
+  align-items:center;
+  justify-content:center;
 }
+
 .menubar a {
   text-decoration: none;
   font-size: 12px;
@@ -88,12 +45,15 @@ body {
 }
 
 .catagories {
+  display:flex;
   background: #c2240c;
   color: #f7f8fa;
   text-transform: uppercase;
   height: 34px;
   width: 170px;
   max-width: 170px;
-  padding: 5px;
-  margin: 0;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  align-self: flex-start;
 }
