@@ -1,34 +1,66 @@
 const {Schema, model}= require('mongoose')
-const User = require('./User')
 
 const shopSchema = new Schema({
     shopName:{ type:String, default:"" },
-    // shopType:{ type:String, default:"" },
+    shopId:{ type:String, default:"" },
+    shopcategory:{ type:String, default:"" },
+    shopType:{ type:String, default:"" },
+
+    categoryOfProducts: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category' // we need required schema
+       },
+    bannerPicture: { type:String, default:"" },
+    isExpress: { type:Boolean, default :false},
+    isCampaign: { type:Boolean, default :false},
+
     shopContactNumber:{ type:String, default:"" },
     shopAddress:{ type:String, default:"" },
     ownerNIDImg:{ type:String, default:"" },
     tradeLicense:{ type:String, default:"" },
-
-    shopImg: { type:String, default:"" },
-    shopBannerImg: { type:String, default:"" },
-
-    isDeleted: { type:Boolean, default :false},
-
+    shopLocation:{ 
+        division:{type:String, default:"" },
+        district:{type:String, default:"" },
+        country:{type:String, default:"" }
+    },
     product:{ 
         type:[String], default:""
     },
 
-    profile: {
-         type: Schema.Types.ObjectId,
-         ref: User // we need required Merchant(shop owner) schema
-        },
     shopReview:[{ 
             type:Schema.Types.ObjectId, 
             ref: 'Review'
-        }]
-        
-},{
+        }],
+    totalReview:{ type:String, default:"" }, 
+    averageReview:{ type:String, default:"" },
+    cashOnDelivery:{ type:String, default:"" },
+    tradeLicenceNumber:{ type:String, default:"" },
+    tradeLicencePicture:{ type:String, default:"" },
+    owner:{ 
+        type:Schema.Types.ObjectId,
+        ref: 'User',
+    },
+    follower:{ 
+        type:Schema.Types.ObjectId,
+        ref: 'Follower',
+    },
+    latitude:{ type:String, default:"" },
+    longitude:{ type:String, default:"" },
+    minimumOrderAmount:{ type:String, default:"" },
+    campaign:{ 
+        type:Schema.Types.ObjectId,
+        ref: 'Campaign',
+    },
+    expressShop:{ 
+        type:Schema.Types.ObjectId,
+        ref: 'ExpressShop',
+    },
+    product:{ 
+        type:Schema.Types.ObjectId,
+        ref: 'Product',
+    },
 
+},{
 
     timestamps:true
 })

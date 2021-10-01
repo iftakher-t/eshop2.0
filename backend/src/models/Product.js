@@ -19,9 +19,7 @@ const productSchema = new Schema({
     previousPrice:{ 
         type:String, required:true,
     },
-    productDiscountPrice:{ 
-        type:String, default:'',
-    },
+
     productImage:{ 
         type:String, required:true,
     },
@@ -31,22 +29,22 @@ const productSchema = new Schema({
     productSize:{ 
         type:[String], required:true,
     },
-
+    subCategory:{ 
+        type:[String], required:true,
+    },
     tags:{ 
-        type: [String], required:true 
+        type: [String], required:true,
     },
     brand:{ 
-        type: [String], required:true 
+        type: [String], required:true,
+    },
+    productDetails:{ 
+        type:[String], required:true,
     },
     shop :
         { type: Schema.Types.ObjectId,
-          ref: 'Shop' // we need required Post schema
+          ref: 'Shop' // we need required shop schema
         },
-    productReview:[{ 
-            type:Schema.Types.ObjectId, 
-            ref: 'ProductReview'
-        }]
-
 },
 {
     timestamps:true

@@ -2,30 +2,21 @@ const {Schema, model}= require('mongoose')
 
 
 const messageSchema = new Schema({
-    user:{ 
+    message:{ type:String, unique:true, trim:true },
+    sender:{ 
         type: Schema.Types.ObjectId, 
-        ref:'User', // we need required User schema
-        required:true
+        ref:'User'
     },
-    title:{ type:String, unique:true, trim:true },
-    bio:{ type:String, trim:true, maxlength:400 },
-    gender: String,
-    profileImage: {type:String, default:""},
-    links:{ 
-        website : String, facebook : String, twitter : String, 
-        github : String },
-
-    productReview :[ 
-        { type: Schema.Types.ObjectId,
-          ref: 'ProductReview' // we need required ProductReview schema
-        }
-    ],
-    addToCart :[ 
-        { type: Schema.Types.ObjectId,
-          ref: 'AddToCart' // we need required AddToCart schema
-        }
-    ],
-    redMark : { String , default :'' }, // for bad conduct
+    receiver:{ 
+        type: Schema.Types.ObjectId, 
+        ref:'User'
+    },
+    conversationId:{ 
+        type: Schema.Types.ObjectId, 
+        ref:'Conversation'
+    },
+    dateTime:{ type:String, default:"" },
+    isDeleted:{ type:Boolean, default:false }
     },
 {
     timestamps:true

@@ -1,20 +1,19 @@
 const {Schema, model}= require('mongoose')
 
-const sliderSchema = new Schema({
-    image:{ type:String, default:"" },
-    lastName:{ type:String, required : true },
+const categorySchema = new Schema({
+    categoryName:{ type:String, required : true },
 
-    userType:{ type:String, default:"user" },
-
-    phoneNumber:{ type:String, required : true }, //  unique : true, 
-    password: { type:String, required : true },
-    Birthday: { type:String, default:"" },
-
-    isDeleted: { type:Boolean, default :false},
-
+    product:{ 
+        type:Schema.Types.ObjectId,
+        ref: 'Product',
+    },
+    shop:{ 
+        type:Schema.Types.ObjectId,
+        ref: 'Shop',
+    }
         
 },{
     timestamps:true
 })
 
-module.exports = model('User', sliderSchema)
+module.exports = model('Category', categorySchema)
