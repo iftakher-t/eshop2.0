@@ -23,9 +23,6 @@ const shopSchema = new Schema({
         district:{type:String, default:"" },
         country:{type:String, default:"" }
     },
-    product:{ 
-        type:[String], default:""
-    },
 
     shopReview:[{ 
             type:Schema.Types.ObjectId, 
