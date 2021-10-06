@@ -1,46 +1,97 @@
 const {Schema, model}= require('mongoose')
 
 const productSchema = new Schema({
-    productName:{ 
-        type:String, required:true, trim:true, maxlength:50 
-    },
-    productCode:{ 
-        type:String, required:true, trim:true
-    },
-    productModel:{ 
-        type:String, required:true,
-    },
-    stockInfo:{ 
-        type:String,
-    },
-    currentPrice:{ 
-        type:String, required:true,
-    },
-    previousPrice:{ 
-        type:String, required:true,
+
+    productDetails :{
+        Name:{ 
+            type:String, 
+            required:true, 
+        },
+        Code:{ 
+            type:String, 
+            required:true
+        },
+        Model:{ 
+            type:String, 
+            required:true,
+        },
+        Image:{ 
+            type:String, 
+            required:true,
+        },
+        Color:[{ 
+            type:String, required:true,
+        }],
+        productSize:[{ 
+            type:String, required:true,
+        }],
     },
 
-    productImage:{ 
-        type:String, required:true,
+    stockInfo:{
+        isStock: {
+            type: Boolean,
+            default: false
+        },
+        numberOfStock: {
+            type: Number,
+            default: 0
+        }
     },
-    productColor:{ 
-        type:[String], required:true,
+
+    price: {
+        previousPrice: {
+            type: Number,
+            default: 0
+        },
+        currentPrice: {
+            type: Number
+        }
     },
-    productSize:{ 
-        type:[String], required:true,
+    othersDetails: {
+        freeShipping : {
+            type: Boolean,
+            default: false
+        },
+        category: [String],
+        tags: [String],
+        color: [
+            {
+                colorName: String,
+                stockAvailable: Number
+            }
+        ],
+        isDeleted: {
+            type: Boolean,
+            default: false
+        }
     },
-    subCategory:{ 
-        type:[String], required:true,
+
+    rattingInfo: {
+        totalStar: {
+            type: Number,
+            default: 0,
+            max: 5
+        },
+        totalReview: {
+            type: Number,
+            default: 0
+        },
+        reviewSection: [
+            {
+                reviewerId: String,
+                review: String,
+                replySection : [
+                    {
+                        replierId: String,
+                        reply: String,
+                        mentionerId: String
+                    } 
+                ]
+            }
+        ]
     },
-    tags:{ 
-        type: [String], required:true,
-    },
-    brand:{ 
-        type: [String], required:true,
-    },
-    productDetails:{ 
-        type:[String], required:true,
-    },
+
+    
     shop :
         { type: Schema.Types.ObjectId,
           ref: 'Shop' // we need required shop schema
